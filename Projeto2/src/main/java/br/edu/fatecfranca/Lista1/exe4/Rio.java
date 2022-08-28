@@ -1,8 +1,5 @@
-
-
 package br.edu.fatecfranca.Lista1.exe4;
 
- 
 public class Rio {
     
     public String nome;
@@ -18,20 +15,17 @@ public class Rio {
         this.nome = nome;
         this.nivel = nivel;
         this.poluido = poluido;
-        
-        
     }
-    
+
     public void ensolarado (double x){
-   if(x <= this.nivel){
-       this.nivel -= x;
-       System.out.println("Nível do Rio foi diminuido");
-   }
-   else {
-       System.out.println("Nível não pode ser negativo");
-   }
-    
-}
+       if(x <= this.nivel){
+           this.nivel -= x;
+           System.out.println("Nível do Rio foi diminuido");
+       }
+       else {
+           System.out.println("Nível não pode ser negativo");
+       }
+    }
     
     public void chover(double x){
         this.nivel += x;
@@ -56,7 +50,12 @@ public class Rio {
             this.poluido = false;
             System.out.println("Rio foi limpo");
         }
-        
     }
-    
+
+    public void mostra() {
+        String aux = this.poluido ? "Sim" : "Não";
+        System.out.printf("\nNome: " + this.nome +
+                " Nível: " + this.nivel +
+                " Poluído: " + aux + "\n");
+    }
 }
