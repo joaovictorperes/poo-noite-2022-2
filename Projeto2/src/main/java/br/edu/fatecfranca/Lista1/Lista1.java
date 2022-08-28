@@ -1,8 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
-
 package br.edu.fatecfranca.Lista1;
 
 import br.edu.fatecfranca.Lista1.exe3.Produto;
@@ -12,7 +7,6 @@ import br.edu.fatecfranca.Lista1.exe3.Produto;
  * @author Lidiane
  */
 public class Lista1 {
-
     public static void main(String[] args) {
         //criar objetos da classe Produto
         //criar instâncias da classe produto
