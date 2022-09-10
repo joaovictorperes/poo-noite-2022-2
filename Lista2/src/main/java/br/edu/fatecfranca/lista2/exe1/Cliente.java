@@ -2,11 +2,11 @@
 package br.edu.fatecfranca.lista2.exe1;
 
 public final class Cliente {
-    private String numeroConta, numeroAgencia,nome;
+    private String numeroConta, numeroAgencia, nome;
     private float saldo;
     
     public Cliente() {
-        
+        //Define valores padrões
     }   
     
     public Cliente(String numeroConta, String numeroAgencia,
@@ -17,9 +17,11 @@ public final class Cliente {
         this.setSaldo(saldo);
     }
     
+    //Aspas simples => Char - único caracter
+    //Aspas duplas => String - vários caracteres
     public void setNumeroConta(String numeroConta) {
         if (numeroConta.length() == 8) {
-            if (numeroConta.charAt(6) == "-") {
+            if (numeroConta.charAt(6) == '-') {
                 this.numeroConta = numeroConta;
             } else {
                 System.out.println("Digito verificador errado");
@@ -31,7 +33,7 @@ public final class Cliente {
     
     public void setNumeroAgencia(String numeroAgencia) {
         if (numeroAgencia.length() == 6) {
-            if (numeroAgencia.charAt(6) == "-") {
+            if (numeroAgencia.charAt(4) == '-') {
                 this.numeroAgencia = numeroAgencia;
             } else {
                 System.out.println("Digito verificador errado");
@@ -66,7 +68,29 @@ public final class Cliente {
         this.setSaldo(this.saldo - x);
     }
     
+    //Definindo os Getters
+    public String getNumeroConta() {
+        return this.numeroConta;
+    }
     
+    public String getNumeroAgencia() {
+        return this.numeroAgencia;
+    }
+    
+    public String getNome() {
+        return this.nome;
+    }
+    
+    public float getSaldo() {
+        return this.saldo;
+    }
+    
+    //métodos
+    public void mostrar() {
+        System.out.println("Conta: " + this.numeroConta + 
+               " Agência: " + this.numeroAgencia +
+               " Nome: " + this.saldo); 
+    }
 }
 
 
