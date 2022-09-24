@@ -27,9 +27,14 @@ public class Gerente extends Funcionario {
 
     @Override 
     public String toString() {
-        return "Gerente{" + "bonificacao=" + bonificacao + 
+        return "Gerente{" + "bonificacao=" + bonificacao + "\n" +
                 super.toString() + '}';
     }
     // super.toString() chama novamente a super classe
+    
+    @Override
+    public float calculaSalario() {
+        return this.salario + this.bonificacao;
+    }
     
 }
